@@ -1,15 +1,11 @@
 JavaInterview
 --
 
-1. Review basic concepts and syntax of Java
-    201812 -
+<h3>MOOCs</h3>
+1. Coursera Serialization: Object Oriented Java Programming: Data Structures and Beyond, UC San Diego, Expected Complete Time: 4 months, 4-6 hours/week [link](https://www.coursera.org/specializations/java-object-oriented) 
+  
+  (1) [Object Oriented Programming in Java](https://www.coursera.org/learn/object-oriented-java?specialization=java-object-oriented)
+      Start: 25 Dec 2018/ End:
+      Review: 
 
-    Sources:
-    * [Java Tutorial for Beginners: Learn in 7 Days](https://www.guru99.com/java-tutorial.html)
-    * [Java Tutorial for Complete Beginners](https://www.udemy.com/java-tutorial/)
-
-
-2. Study DSA with Cracking the Coding Interview
-
-
-3. Leetcode
+    
