@@ -7,4 +7,5 @@ JavaInterview
    (1) [Object Oriented Programming in Java](https://www.coursera.org/learn/object-oriented-java?specialization=java-object-oriented)</br>
    * Expected Complete Time: 6 weeks, 4-6 hours/week 
    * Start: 25 Dec 2018/ End:
-   * Review: 
+   * Review: (★★★★★)
+      A good concepts introduction for beginners. If you want a quick review of Java, skip week 3 and 5.
