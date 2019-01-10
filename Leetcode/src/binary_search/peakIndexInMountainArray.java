@@ -1,6 +1,8 @@
-package searching;
+package binary_search;
 
 /*
+ 	[Easy] 852. Peak Index in a Mountain Array
+ 	
  	Concept: Binary Search
  	
  	Let's call an array A a mountain if the following properties hold:

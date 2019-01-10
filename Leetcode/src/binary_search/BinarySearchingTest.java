@@ -1,4 +1,4 @@
-package searching;
+package binary_search;
 
 public class BinarySearchingTest {
 
