@@ -7,7 +7,12 @@ JavaInterview
       * [Easy] 922. Sort Array By Parity II
       * [Medium] 442. Find All Duplicates in an Array
    * Stack
-
+      * 
+   * Queue
+      * 
+   * Linked List
+      * [Medium] 503. Next Greater Element II
+      * [Medium] 682. Baseball Game
    * Binary Search
       * [Easy] 852. Peak Index in a Mountain Array
 
