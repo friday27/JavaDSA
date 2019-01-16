@@ -1,8 +1,15 @@
 JavaInterview
 --
 <h3>Leetcode</h3>
-* [Binary Search](https://leetcode.com/problemset/all/?topicSlugs=binary-search)
 
+   * Array
+      * [Easy] 509. Fibonacci Number
+      * [Easy] 922. Sort Array By Parity II
+      * [Medium] 442. Find All Duplicates in an Array
+   * Stack
+
+   * Binary Search
+      * [Easy] 852. Peak Index in a Mountain Array
 
 
 <h3>MOOCs</h3>
