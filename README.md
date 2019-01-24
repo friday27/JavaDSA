@@ -7,9 +7,10 @@ JavaInterview
       * [Easy] 922. Sort Array By Parity II
       * [Medium] 442. Find All Duplicates in an Array
    * Stack
-      * 
+      * [Easy] 20. Valid Parentheses
+      * [Easy] 682. Baseball Game
+      * [Medium] 503. Next Greater Element II
    * Queue
-      * 
    * Linked List
       * [Medium] 503. Next Greater Element II
       * [Medium] 682. Baseball Game
