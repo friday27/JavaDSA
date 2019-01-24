@@ -10,9 +10,10 @@ JavaInterview
       * [Easy] 20. Valid Parentheses
       * [Easy] 682. Baseball Game
       * [Medium] 503. Next Greater Element II
-   * Queue 
+   * Queue
    * Linked List
-
+      * [Medium] 503. Next Greater Element II
+      * [Medium] 682. Baseball Game
    * Binary Search
       * [Easy] 852. Peak Index in a Mountain Array
 
