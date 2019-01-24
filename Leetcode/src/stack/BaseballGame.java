@@ -3,7 +3,7 @@ package stack;
 import java.util.Stack;
 
 /*
- * [Medium] 682. Baseball Game
+ * [Easy] 682. Baseball Game
  * 
  * You're now a baseball game point recorder.
  * Given a list of strings, each string can be one of the 4 following types:
