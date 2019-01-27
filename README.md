@@ -8,8 +8,10 @@ JavaInterview
       * [Medium] 442. Find All Duplicates in an Array
    * Stack
       * [Easy] 20. Valid Parentheses
+      * [Easy] 155. Min Stack
       * [Easy] 682. Baseball Game
       * [Medium] 503. Next Greater Element II
+      * 
    * Queue
    * Linked List
       * [Medium] 503. Next Greater Element II
