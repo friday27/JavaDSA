@@ -11,7 +11,7 @@ JavaInterview
       * [Easy] 155. Min Stack
       * [Easy] 682. Baseball Game
       * [Medium] 503. Next Greater Element II
-      * 
+      * [Medium] 71. Simplify Path
    * Queue
    * Linked List
       * [Medium] 503. Next Greater Element II
