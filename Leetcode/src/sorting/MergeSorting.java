@@ -6,7 +6,7 @@ public class MergeSorting {
 	public static int[] MergeSorting(int[] arr) {
 		if(arr.length==1) return arr;
 		int sep = arr.length / 2;
-		int[] left = MergeSorting(arr[0:sep]);
+//		int[] left = MergeSorting(arr[0:sep]);
 	}
 	
 	public static int[] merge(int[] arr1, int[] arr2) {
