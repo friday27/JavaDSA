@@ -15,7 +15,7 @@
 
 import java.util.Stack;
 
-class Solution {
+class SimplifyPath {
     public String simplifyPath(String path) {
         Stack<String> stack = new Stack<String>();
         Stack<String> stack2 = new Stack<String>();
