@@ -14,8 +14,11 @@ JavaInterview
       * [Medium] 71. Simplify Path
    * Queue
    * Linked List
-      * [Medium] 503. Next Greater Element II
-      * [Medium] 682. Baseball Game
+      * [Easy] 21. Merge Two Sorted Lists
+      * [Easy] 
+      * [Easy] 
+      * [Medium] 
+      * [Medium] 
    * Binary Search
       * [Easy] 852. Peak Index in a Mountain Array
 
