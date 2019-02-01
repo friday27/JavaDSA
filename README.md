@@ -15,8 +15,8 @@ JavaInterview
    * Queue
    * Linked List
       * [Easy] 21. Merge Two Sorted Lists
-      * [Easy] 
-      * [Easy] 
+      * [Easy] 83. Remove Duplicates from Sorted List
+      * [Easy] 141. Linked List Cycle
       * [Medium] 
       * [Medium] 
    * Binary Search
