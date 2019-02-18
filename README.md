@@ -17,8 +17,9 @@ JavaInterview
       * [Easy] 21. Merge Two Sorted Lists
       * [Easy] 83. Remove Duplicates from Sorted List
       * [Easy] 141. Linked List Cycle
-      * [Medium] 
-      * [Medium] 
+      * [Medium] 2. Add Two Numbers
+      * [Medium] 19. Remove Nth Node From End of List
+   * Hash Table
    * Binary Search
       * [Easy] 852. Peak Index in a Mountain Array
 
