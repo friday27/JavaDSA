@@ -20,6 +20,11 @@ JavaInterview
       * [Medium] 2. Add Two Numbers
       * [Medium] 19. Remove Nth Node From End of List
    * Hash Table
+      * [Easy] 1. Two Sum
+      * [Easy]
+      * [Easy]
+      * [Medium]
+      * [Medium]
    * Binary Search
       * [Easy] 852. Peak Index in a Mountain Array
 
