@@ -22,7 +22,7 @@ JavaInterview
    * Hash Table
       * [Easy] 1. Two Sum
       * [Easy] 136. Single Number
-      * [Easy]
+      * [Easy] 202. Happy Number
       * [Medium]
       * [Medium]
    * Binary Search
