@@ -21,7 +21,7 @@ JavaInterview
       * [Medium] 19. Remove Nth Node From End of List
    * Hash Table
       * [Easy] 1. Two Sum
-      * [Easy]
+      * [Easy] 136. Single Number
       * [Easy]
       * [Medium]
       * [Medium]
