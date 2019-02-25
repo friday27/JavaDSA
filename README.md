@@ -23,7 +23,7 @@ JavaInterview
       * [Easy] 1. Two Sum
       * [Easy] 136. Single Number
       * [Easy] 202. Happy Number
-      * [Medium] 3.
+      * [Medium] 739. Daily Temperatures **(not good enough)**
       * [Medium]
    * Binary Search
       * [Easy] 852. Peak Index in a Mountain Array
