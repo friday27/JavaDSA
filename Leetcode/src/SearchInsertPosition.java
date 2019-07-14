@@ -23,6 +23,17 @@
     Output: 0
 */
 
+//neat
+    // int low = 0, high = nums.length;
+    // while(low < high) {
+    //     int mid = low + (high-low) / 2; //to prevent overflow
+    //     if(nums[mid] < target)
+    //         low = mid + 1;
+    //     else
+    //         high = mid - 1;
+    // }
+    // return low;
+
 //Runtime: 0ms(100.00%); Memory Usage: 37.9MB(99.32%)
 class Solution {
     public int searchInsert(int[] nums, int target) {
