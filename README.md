@@ -1,5 +1,12 @@
 JavaInterview
 --
+### TODOs
+- OOP Programming
+- Unit test
+- Functional programming
+- How to use build management tools like Maven
+- Clean code
+
 ### MOOCs
 * Udemy courses recommended by **The Data Engineering Cookbook**
     * OOP Object oriented programming
