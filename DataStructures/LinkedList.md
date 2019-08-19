@@ -55,8 +55,8 @@ One of the most used data structure!
 * @Override could be considered as a test. If you don't implement or overwrite the class from superclass, Java will return error message. Also, Error message will show up when the superclass is deleted.
 
 ### Related Leetcode Problems
-* [Easy]  21.
-* [Easy]
+* [Easy]  21. [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/)
+* [Easy]  83. [Remove Duplicates from Sorted List](https://leetcode.com/problems/remove-duplicates-from-sorted-list/)
 * [Easy]
 * [Easy]
 * [Easy]
