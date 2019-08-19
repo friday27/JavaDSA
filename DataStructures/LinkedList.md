@@ -57,6 +57,7 @@ One of the most used data structure!
 ### Related Leetcode Problems
 * [Easy]  21. [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/)
 * [Easy]  83. [Remove Duplicates from Sorted List](https://leetcode.com/problems/remove-duplicates-from-sorted-list/)
-* [Easy]
-* [Easy]
-* [Easy]
+* [Easy]  141. [Linked List Cycle
+](https://leetcode.com/problems/linked-list-cycle/)
+* [Easy]  160. [Intersection of Two Linked Lists](https://leetcode.com/problems/intersection-of-two-linked-lists/)
+* [Easy]  203. [Remove Linked List Elements](https://leetcode.com/problems/remove-linked-list-elements/)
