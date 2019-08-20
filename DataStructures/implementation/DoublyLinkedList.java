@@ -98,6 +98,7 @@ public class DoublyLinkedList<T> implements Iterable<T> {
         return data;
     }
 
+    //Set to private since the Node class is private
     private T remove(Node<T> node) {
         // If the node to remove is somewhere either at the
         // head or the tail handle those independently
