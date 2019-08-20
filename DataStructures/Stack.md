@@ -29,4 +29,8 @@ A stack is a one-ended linear data structure which models a real world stack by 
         return s.isEmpty()
 
 ### Related Leetcode Problems
-* [Easy]  no.[]()
+* [Easy]  20.[Valid Parentheses](https://leetcode.com/problems/valid-parentheses/)
+* [Easy]
+* [Easy]
+* [Easy]
+* [Easy]
