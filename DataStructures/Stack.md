@@ -30,7 +30,7 @@ A stack is a one-ended linear data structure which models a real world stack by 
 
 ### Related Leetcode Problems
 * [Easy]  20.[Valid Parentheses](https://leetcode.com/problems/valid-parentheses/)
-* [Easy]
+* [Easy]  155. [Min Stack](https://leetcode.com/problems/min-stack/)
 * [Easy]
 * [Easy]
 * [Easy]
