@@ -35,4 +35,6 @@
                     Q.enqueue(neighbor)
 
 ### Related Leetcode Problems
-* [Easy]  no. []()
+* No easy problem for Queue
+* [Medium]  622. [Design Circular Queue](https://leetcode.com/problems/design-circular-queue/)
+* [Medium]  641. [Design Circular Deque](https://leetcode.com/problems/design-circular-deque/)
