@@ -75,3 +75,7 @@
 * Idea: Instead doing linear search, we lookup the specific node using a hash table, and change the value (indexed) when swap.
     * We will map 1 value to multiple positions for duplicate values.
     ![Remove From Binary Heap](attachments/RemoveFromBinaryHeap.png)
+
+
+### Related Leetcode Problems
+* [Easy]  1046. [Last Stone Weight](https://leetcode.com/problems/last-stone-weight/)

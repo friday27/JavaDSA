@@ -18,13 +18,13 @@ public class Queue<T> implements Iterable {
 
     public int peek() {
         if(isEmpty())
-            throws new RuntimeException("Empty Queue");
+            throw new RuntimeException("Empty Queue");
         return list.peekFirst();
     }
 
     public int poll() {
         if(isEmpty())
-            throws new RuntimeException("Empty Queue");
+            throw new RuntimeException("Empty Queue");
         return list.removeFirst();
     }
 
