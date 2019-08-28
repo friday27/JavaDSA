@@ -37,6 +37,5 @@ A process that after you union some elements as a group, find the root and point
 (add a screenshot of 3:15)
 
 ### Related Leetcode Problems
-* No easy problem for Union Find
+* [Easy]  733. [Flood Fill](https://leetcode.com/problems/flood-fill/)
 * [Medium]  200. [Number of Islands](https://leetcode.com/problems/number-of-islands/)
-

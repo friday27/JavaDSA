@@ -71,5 +71,6 @@ The 3 types of traversals are naturally defined recursively:
 
 
 ### Related Leetcode Problems
-* No easy problem for Queue
+* [Easy]  107. [Binary Tree Level Order Traversal II](https://leetcode.com/problems/binary-tree-level-order-traversal-ii/)
+* [Easy]  690. [Employee Importance](https://leetcode.com/problems/employee-importance/)
 * [Medium]  1038. [Binary Search Tree to Greater Sum Tree](https://leetcode.com/problems/binary-search-tree-to-greater-sum-tree/)
