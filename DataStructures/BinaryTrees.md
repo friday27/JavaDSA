@@ -68,3 +68,8 @@ The 3 types of traversals are naturally defined recursively:
 * level order traversal
     * To print the nodes as they appear 1 layer at a time
     * Use a queue and poll from the queue and offer the child nodes of the removed node to the queue, until the queue is empty
+
+
+### Related Leetcode Problems
+* No easy problem for Queue
+* [Medium]  1038. [Binary Search Tree to Greater Sum Tree](https://leetcode.com/problems/binary-search-tree-to-greater-sum-tree/)
