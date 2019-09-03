@@ -39,3 +39,51 @@
 
 ### Open addressing
 * Open addressing deals with hash collisions by finding another place within the hash table for the object to go by offsetting it from the position to which it hashed to.
+
+* When using open addressing as a collision resolution technique the key-value pairs are stored in the table(array) itself, as opposed to a data structure like in seperate chaining. This means we need to care a great deal about the size of our hash table and how many elements are currently in the table.
+
+        Load factor = items in table / size of the table
+
+* There are an infinite amount of probing sequences you can come up with, here are a few:
+    * Linear probing
+
+            P(x) = ax + b where a, b are constants
+
+    * Quadratic probing
+
+            P(x) = ax^2 + bx + c, where a, b, c are constants
+
+    * Double hashing
+
+            P(k, x) = x*H2(k), where H2(k) is a secondary hash function
+
+    * Pseudo random number generator
+
+            P(k, x) = x*RNG(H(k), x), where RNG is a random number generator function seeded with H(k)
+
+* General inserting method for open addressing on a table of size N goes as follows:
+
+        x = 1 // as a specific factor, if collision happens, increment x by 1
+        keyHash = H(x)
+        index = keyHash
+        
+        while table[index] != null
+            index = (keyHash + P(k, x)) mod N
+            x = x + 1
+
+        insert (k, v) at table[index]
+        // Where H(k) is the hash for the key k and P(k, x) is the probing function
+
+### Issue with removing
+* Use naive removing (probe to the next element while the hash result doesn't equal to the target result nor null) would output wrong sometimes. 
+
+* The solution is to use a unique marker called a **tombstone** instead of null to indicate that a (k, v) pair has been deleted and that the bucket should be skipped during a search.
+
+* **Lazy deletion**: Lots of tombstones might cause a crowded table. An optimization called lazy deletion is to replace the first tombstone with the value we did look up for (x) and set x to null.
+
+### Related Leetcode Problems
+* [Easy] 
+* [Easy] 
+* [Easy] 
+* [Easy] 
+* [Easy] 
