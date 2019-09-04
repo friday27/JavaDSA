@@ -86,4 +86,4 @@
 * [Easy] 202. [Happy Number](https://leetcode.com/problems/happy-number/)
 * [Easy] 217. [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/)
 * [Easy] 219. [Contains Duplicate II](https://leetcode.com/problems/contains-duplicate-ii/)
-* [Easy] 
+* [Easy] 387. [First Unique Character in a String](https://leetcode.com/problems/first-unique-character-in-a-string/)
