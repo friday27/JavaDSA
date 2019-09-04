@@ -37,5 +37,42 @@ public class HashTableQuadraticProbing<K, V> extends Iterable<K> {
         valueTable = (K[]) new Object[this.capacity];
     }
 
-    //video 4:13
+    private static int next2Power(int n) {
+        return Integer.higestOneBit(n) << 1;
+    }
+
+    private static int P(int x) {
+        return (x*x + x) >> 1;
+    }
+
+    private int normalizeIndex(int keyHash) {
+        return (keyHash & 0x7FFFFFF) % capacity;
+    }
+
+    private void clear() {
+        for(int i=0; i<capacity; i++) {
+            keyTable[i] = null;
+            valueTable[i] = null;
+        }
+        keyCount = usedBucket = 0;
+        modificationCount++;
+    }
+
+    public int size() {
+        return keyCount;
+    }
+
+    public boolean isEmpty() {
+        return keyCount == 0;
+    }
+
+    public V put(K key, V value) {
+        return insert(key, value);
+    }
+
+    public V add(K key, V value) {
+        return insert(key, value);
+    }
+
+    // video 5:31
 }
