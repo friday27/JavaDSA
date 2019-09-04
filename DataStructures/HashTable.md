@@ -1,4 +1,4 @@
-# Hash Tables
+# Hash Table
 
 * A hash table is a data structure that provides a mapping from keys to values using a technique called hashing.
 
@@ -82,8 +82,8 @@
 * **Lazy deletion**: Lots of tombstones might cause a crowded table. An optimization called lazy deletion is to replace the first tombstone with the value we did look up for (x) and set x to null.
 
 ### Related Leetcode Problems
-* [Easy] 
-* [Easy] 
-* [Easy] 
-* [Easy] 
+* [Easy] 136. [Single Number](https://leetcode.com/problems/single-number/)
+* [Easy] 202. [Happy Number](https://leetcode.com/problems/happy-number/)
+* [Easy] 217. [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/)
+* [Easy] 219. [Contains Duplicate II](https://leetcode.com/problems/contains-duplicate-ii/)
 * [Easy] 
