@@ -8,7 +8,7 @@ public class FenwickTree {
     public FenwickTree(long[] values) {
         if(values == null)
             throw new IllegalArgumentException("Values array cannot be null!"); 
-        this.tree = tree.clone();
+        this.tree = values.clone();
 
         for(int i=1; i<tree.length; i++) {
             int j = i + lsb(i);
