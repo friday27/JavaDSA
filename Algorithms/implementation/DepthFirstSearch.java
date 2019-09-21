@@ -1,25 +1,3 @@
-public class DepthFirstPaths {
-    private boolean[] marked;
-    private int[] edgeTo;
-    private int s; //previous vertex on path from s to v
-
-    public DepthFirstPaths(Grapg G, int s) {
-        //...
-        dfs(G, s);
-    }
-
-    private void dfs(Graph G, int v) {
-        makred[v] = true;
-        for(int w: G.adj(v)) {
-            if(!makred[w]){
-                dfs(G, w);
-                edgeTo[w] = v;
-            }
-        }
-    }
-}
-
-// https://www.geeksforgeeks.org/depth-first-search-or-dfs-for-a-graph/
 // Java program to print DFS traversal from a given given graph 
 import java.io.*; 
 import java.util.*; 
@@ -36,10 +14,10 @@ class Graph
     // Constructor 
     Graph(int v) 
     { 
-        V = v; 
+        this.V = v; 
         adj = new LinkedList[v]; 
         for (int i=0; i<v; ++i) 
-            adj[i] = new LinkedList(); 
+            adj[i] = new LinkedList<>(); 
     } 
 
     //Function to add an edge into the graph 
