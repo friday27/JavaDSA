@@ -1,4 +1,4 @@
-public class Stack<T> implements Iterable<T> {
+ public class Stack<T> implements Iterable<T> {
     // Use doubly linked list to implement stack
     private java.util.LinkedList<T> list = new java.util.LinkedList<T>();
 
