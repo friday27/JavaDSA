@@ -60,7 +60,9 @@ public class BinarySearchTree <T extends Comparable<T>>{
         else if(cmp > 0)
             node.right = remove(node.right, elem);
         else {
-            if(node.left == null) {
+            if(node.left == null && node.right == null)
+                return null;
+            else if(node.left == null) {
                 Node rightChild = node.right;
                 node.data = null;
                 node = null;

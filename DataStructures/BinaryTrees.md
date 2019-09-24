@@ -1,3 +1,4 @@
+
 # Binary Trees (BT) and Binary Search Trees (BST)
 
 ### Terminology

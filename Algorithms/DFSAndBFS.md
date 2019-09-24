@@ -1,6 +1,24 @@
 # DFS and BFS
 
+* [Java Libraries for Graphs](https://www.baeldung.com/java-graphs)
+
 ### Depth First Search, DFS
+
+        Set<String> depthFirstTraversal(Graph graph, String root) {
+            Set<String> visited = new LinkedHashSet<String>();
+            Stack<String> stack = new Stack<String>();
+            stack.push(root);
+            while (!stack.isEmpty()) {
+                String vertex = stack.pop();
+                if (!visited.contains(vertex)) {
+                    visited.add(vertex);
+                    for (Vertex v :graph.getAdjVertices(vertex)) {              
+                        stack.push(v.label);
+                    }
+                }
+            }
+            return visited;
+        }
 
 * Questions
     * Is there a path from A to B?
@@ -29,6 +47,23 @@
 
 -----
 ### Breadth First Search, BFS
+
+        Set<String> breadthFirstTraversal(Graph graph, String root) {
+            Set<String> visited = new LinkedHashSet<String>();
+            Queue<String> queue = new LinkedList<String>();
+            queue.add(root);
+            visited.add(root);
+            while (!queue.isEmpty()) {
+                String vertex = queue.poll();
+                for (Vertex v : graph.getAdjVertices(vertex)) {
+                    if (!visited.contains(v.label)) {
+                        visited.add(v.label);
+                        queue.add(v.label);
+                    }
+                }
+            }
+            return visited;
+        }
 
 * Questions
     * Find the shortest path from A to B
