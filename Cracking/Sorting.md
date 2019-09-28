@@ -20,7 +20,9 @@
     1. Point to i and find the smallest element from i+1 to the last element
     2. Switch(Swap) the found element with the ith element
 
-* Complexity: O(n^2) (It takes time proportional to n square)
+* Complexity
+    * Time: O(n^2) on average and worst case (It takes time proportional to n square)
+    * Space: O(1)
 
 
 ### Insertion Sort [link](../Algorithms/implementation/InsertionSort.java)
@@ -34,8 +36,9 @@
     1. Starting from the last element, if it's less than the previous element, swap it
     2. After the first run, the first element is sorted. Keep doing this until the whole array is sorted
 
-* Complexity: O(n^2) (It takes time proportional to n square)
-
+* Complexity 
+    * Time: O(n^2) on average and worst cast (It takes time proportional to n square)
+    * Space: O(1)
 
 ### Heap Sort [link](../Algorithms/implementation/HeapSort.java)
 * Concept
@@ -52,11 +55,13 @@
     2. Reorder all the elements – the ones with smaller value are placed before the pivot, and all the elements greater than the pivot after it. After this step, the pivot is in its final position
     3. Apply the above steps recursively to the left sublist and the right sublist
 
-* Complexity: O(nlogn) on average
-    * The first iteration takes O(n)
-    * The second iteration takes 2xO(n/2)
-    * In the worst case, O(n^2)
-
+* Complexity: 
+    * Time: O(n logn) on average, O(n^2) worst
+        * The first iteration takes O(n)
+        * The second iteration takes 2xO(n/2)
+        * In the worst case, O(n^2)
+    * Space: O(logn)
+    
 
 ### Merge Sort [link](../Algorithms/implementation/MergeSort.java)
 * Concept
@@ -65,7 +70,7 @@
         2. Sort and merge the divided arrays from bottom to top and get the sorted array
 
 * Complexity
-    * Time complexity: O(nlogn)
+    * Time complexity: O(n logn) on average and worst case
     * Space complexity: O(n)
 
 
