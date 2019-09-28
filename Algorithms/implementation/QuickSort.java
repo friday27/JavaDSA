@@ -21,6 +21,7 @@ public class QuickSort {
     // Performs Hoare partition algorithm for quicksort
     private static int partition(int[] arr, int lo, int hi) {
         int pivot = arr[hi];
+        // See i is the seperate point between element smaller than pivot and greater than it
         int i = lo - 1, j = lo;
         while(j < hi) {
             if(arr[j] <= pivot) {

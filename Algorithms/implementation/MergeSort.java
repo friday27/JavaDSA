@@ -13,6 +13,7 @@ public class MergeSort {
     public static int[] merge(int[] arr1, int[] arr2) {
         int[] res = new int[arr1.length+arr2.length];
         int i = 0, j = 0, k = 0;
+        // Get the smaller element from the front of arr1 and arr2
         while(i < arr1.length && j < arr2.length) {
             if(arr1[i] <= arr2[j]) {
                 res[k++] = arr1[i++];
