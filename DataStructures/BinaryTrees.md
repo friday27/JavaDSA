@@ -1,4 +1,3 @@
-
 # Binary Trees (BT) and Binary Search Trees (BST)
 
 ### Terminology
@@ -15,7 +14,7 @@
         | Operation   | Avg       | Worst |
         +-------------+-----------+-------+
         | Insert      | O(log(n)) | O(n)  |
-        +-------------+-----------+-------+
+        +-------------+-----------+-------+ 
         | Delete      | O(log(n)) | O(n)  |
         +-------------+-----------+-------+
         | Remove      | O(log(n)) | O(n)  |
@@ -34,11 +33,11 @@ The inserting operation is a process of comparison:
 ### Removing elements from a BST
 It can be seen as a 2 step process:
 1. **Find** the element to be removed (if it exists)
-2. **Replace** the node to be removed with it's successor (if any) to maintain the BST in variant. Below are 4 cases of removing phase:
+2. **Replace** the node to be removed with it's successor (if any) to maintain the BST invariant. Below are 4 cases of removing phase:
     1. The node is a leaf node -> just remove it!
     2. The node has a right subtree -> the successor would be the root node of right subtree
     3. The node has a left subtree -> the successor would be the root node of left subtree
-    4. The node has both left and right subtrees -> the successor could be either the last node of left subtree or the first node of right subtree, since it would be the seperating number of left and right subtrees
+    4. The node has both left and right subtrees -> the successor could be either the smallest node of left subtree or the biggest node of right subtree, since it would be the seperating number of left and right subtrees
 
 ### Tree Traversals
 The 3 types of traversals are naturally defined recursively:
