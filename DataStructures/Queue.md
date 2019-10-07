@@ -7,7 +7,7 @@
 ### Complexity Analysis
 
         +-----------------+
-        | Qnqueue  | O(1) |
+        | Enqueue  | O(1) |
         +-----------------+
         | Dequque  | O(1) |
         +-----------------+

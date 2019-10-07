@@ -19,6 +19,6 @@ class Solution {
             }
             p = prev.next;
         }
-        return fakeHead.next;
+        return fakeHead.next; //return the original head
     }
 }

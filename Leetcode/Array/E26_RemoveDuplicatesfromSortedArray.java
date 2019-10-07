@@ -9,6 +9,7 @@ class Solution {
             return 1;
         int pointer = 0;
         for(int idx=1; idx<nums.length; idx++) {
+            // Find the first different element after index i
             if(nums[idx] != nums[idx-1]) {
                 if(pointer+1 != idx) {
                     nums[pointer+1] = nums[idx];

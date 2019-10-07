@@ -1,6 +1,8 @@
 /*
     27. Remove Element
     Time: O(n)
+
+    {1,2,3,4,5} -> remove 3
 */
 
 class Solution {
@@ -11,7 +13,7 @@ class Solution {
                 if(pointer != i) {
                     nums[pointer] = nums[i];
                 }   
-                pointer++;
+                pointer++; // If found the value to be removed, keep the pointer there
             }
         }
         return pointer;
