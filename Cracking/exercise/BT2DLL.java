@@ -2,6 +2,18 @@
     https://www.geeksforgeeks.org/convert-a-given-binary-tree-to-doubly-linked-list-set-4/
     Convert a binary tree to a doubly linked list
     Use left for prev, right for next
+    
+    [Solution]
+    https://www.geeksforgeeks.org/convert-given-binary-tree-doubly-linked-list-set-3/
+    https://algorithmsandme.com/binary-tree-to-doubly-linked-list-conversion/
+
+    Question to ask: Which node should be the head of this doubly linked list?
+        leftmost node -> inorder (or sorted array as the output)
+        root node -> preorder
+
+    [For inorder case]
+    If the node is a left child, then the inorder successor would be the parent node.
+    If it's a parent node, it would be the leftmost child of the right subtree.
 */
 
 import java.util.*;
@@ -16,31 +28,25 @@ class Node {
 }
 
 public class BT2DLL {
-    public static Node convert2DLL(Node root) {
-        if(root == null)
-            return null;
-        if(root.left == null && root.right == null)
-            return root;
-        List<Node> arr = new ArrayList<>();
-        arr = helper(arr, root);
-        arr.get(0).left = null;
-        arr.get(0).right = arr.get(1);
-        for(int i=1; i<arr.size()-1; i++) {
-            arr.get(i).left = arr.get(i-1);
-            arr.get(i).right = arr.get(i+1);
-        }
-        arr.get(arr.size()-1).left = arr.get(arr.size()-2);
-        arr.get(arr.size()-1).right = null;
-        return arr.get(0);
-    }
+    Node root;
+    // prev:
+    // To keep track of inorder predecessor, 
+    // store the previous node of the current node visited throughout traversal. 
+    // We would link the left child to the inorder predecessor.
+    static Node head, prev;
 
-    private static List<Node> helper(List<Node> arr, Node current) {
-        if(current == null)
-            return arr;
-        arr = helper(arr, current.left);
-        arr.add(current);
-        arr = helper(arr, current.right);
-        return arr;
+    public void BinaryTree2DoubleLinkedList(Node root){
+        if(root == null)
+            return;
+        BinaryTree2DoubleLinkedList(root.left);
+        if(prev == null) //the leftmost node is the head
+            head = root;
+        else {
+            root.left = prev;
+            prev.right = root;
+        }
+        prev = root;
+        BinaryTree2DoubleLinkedList(root.right);
     }
 
     private static void printList(Node head) {
@@ -61,7 +67,8 @@ public class BT2DLL {
         root.right.left = new Node(36); 
    
         // Convert to DLL 
-        Node head = convert2DLL(root); 
+        BT2DLL converter = new BT2DLL();
+        converter.BinaryTree2DoubleLinkedList(root);
    
         // Print the converted list 
         printList(head); 

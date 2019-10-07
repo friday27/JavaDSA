@@ -1,5 +1,9 @@
 # Object Oriendted Design
 
+### Cases
+* Library Management System
+* Parking Lot
+
 ### How-To
 1. Handle ambiguity
     * Who is going to use it?

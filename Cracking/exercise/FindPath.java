@@ -18,13 +18,13 @@ class FindPath {
         queue.offer(a);
         while(!queue.isEmpty()) {
             int current = queue.poll();
+            if(current == b)
+                return true;
             visited.add(current);
             adj = graph.get(current);
             if(adj.size() != 0) {
                 for(int i: adj) {
-                    if(i == b)
-                        return true;
-                    else if(visited.add(i))
+                    if(visited.add(i))
                         queue.offer(i);
                 }
             }
