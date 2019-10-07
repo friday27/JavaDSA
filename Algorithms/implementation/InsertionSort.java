@@ -4,7 +4,7 @@ public class InsertionSort {
     public static void insertionSort(int[] arr) {
         if(arr == null | arr.length <= 1)
             return;
-
+        // Since index 0 is sorted, we can start from index 1
         for(int j=1; j<arr.length; j++) {
             int i = j - 1;
             while(i > -1 && arr[j] < arr[i]) {

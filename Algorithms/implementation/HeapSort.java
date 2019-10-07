@@ -1,6 +1,15 @@
 import java.util.*;
 
 public class HeapSort {
+    public static void heapSortWithPQ(int[] arr) {
+        PriorityQueue<Integer> pq = new PriorityQueue<>(); //min heap
+        for(int i: arr)
+            pq.offer(i);
+        for(int i=0; i<arr.length; i++) {
+            arr[i] = pq.poll();
+        }
+    }
+
     public static void heapSort(int[] arr) {
         if(arr == null)
             return;
@@ -11,6 +20,7 @@ public class HeapSort {
         for(int i=Math.max(0, n/2-1); i>=0; i--)
             sink(arr, n, i);
 
+        // we first find the maximum element and place the maximum element at the end. 
         for(int i=n-1; i>=0; i--) {
             swap(arr, 0, i);
             sink(arr, i, 0);
@@ -61,6 +71,7 @@ public class HeapSort {
                 int[] arrayCopy = array.clone();
 
                 heapSort(array);
+                // heapSortWithPQ(array);
                 java.util.Arrays.sort(arrayCopy);
 
                 if (!java.util.Arrays.equals(array, arrayCopy)) {

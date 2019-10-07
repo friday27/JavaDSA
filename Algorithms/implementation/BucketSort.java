@@ -6,14 +6,17 @@ public class BucketSort {
             return;
         int bucketNum = (maxVal-minVal) / arr.length + 1;
         List<List<Integer>> buckets = new ArrayList<>(bucketNum);
+        // Create empty list for each bucket
         for(int i=0; i<bucketNum; i++) {
             buckets.add(new ArrayList<>());
         }
+        // Put elements into buckets
         for(int i=0; i<arr.length; i++) {
             int idx = (i-minVal)/(maxVal-minVal);
             List<Integer> b = buckets.get(idx);
             b.add(arr[i]);
         }
+        // Sort elements in each bucket and merge all buckets
         for(int i=0, k=0; i<bucketNum; i++) {
             List<Integer> b = buckets.get(i);
             if(b != null) {

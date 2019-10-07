@@ -2,7 +2,6 @@ import java.util.Random;
 
 // http://alrightchiu.github.io/SecondRound/comparison-sort-quick-sortkuai-su-pai-xu-fa.html
 public class QuickSort {
-
     public static void quicksort(int[] arr) {
         if (arr == null) 
             return;
