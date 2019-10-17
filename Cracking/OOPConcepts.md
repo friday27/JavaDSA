@@ -16,8 +16,7 @@ Object is an instance of a class and it can has its own state, behavior and iden
     * We can use `object instanceOf className`
 
 * Difference between class and an object?
-    * An object is an instance of a class. Objects hold any information , but classes don’t have any information. Definition of properties and functions can be done at class and can be used by the object.
-    * Class can have sub-classes, and an object doesn’t have sub-objects.
+    * An object is an instance of a class. Objects hold any information, but classes don’t have any information. Definition of properties and functions can be done at class and can be used by the object.
 
 * What is **this** pointer?
 THIS keyword is used as a pointer which refers to the current object of a class.
@@ -26,7 +25,7 @@ THIS keyword is used as a pointer which refers to the current object of a class.
     * The super keyword is used to invoke the overridden method, which overrides one of its superclass methods. This keyword allows to access overridden methods and also to access hidden members of the superclass.
     * It also forwards a call from a constructor, to a constructor in the superclass.
 
-* Modifiers
+* Modifiers (Control the access to data, functions and classes)
     * If there's no modifier, it's default to be available to any class under the same package.
     * Public
         * Being declared public means it can be accessed from any package.
@@ -37,7 +36,7 @@ THIS keyword is used as a pointer which refers to the current object of a class.
         * Also, private class cannot be inherited. Top class can be declared as private while inner class and interface cannot.
     * Protected
         * Being declared protected means it can be accessed only by the subclasses in other package or any class within the same package.
-        * Protected access gives the subclass a chance to use the helper method or variable, while preventing a nonrelated class from trying to use it.
+        * Protected access gives the subclass a chance to use the helper method or variable, while preventing a not related class from trying to use it.
 
 * What is a constructor?
     * Constructor is a method used to initialize the state of an object, and it gets invoked at the time of object creation. 
@@ -53,12 +52,8 @@ THIS keyword is used as a pointer which refers to the current object of a class.
 * Static?
 Static is a keyword.
 We can use static to create class variables and class functions to save memory.
-There're 2 types of variable: one is instance variable and the other is class variable. Instance variable belongs to the object so it is save in different memory space while class variable belongs to the class and it points to the same memory space in different objects. So when we update a static variable in an object, other objects created from the same class will get the same updated value.
+There're 2 types of variable: one is instance variable and the other is class variable. Instance variable belongs to the object so it is saved in different memory space while class variable belongs to the class and it points to the same memory space in different objects. So when we update a static variable in an object, other objects created from the same class will get the same updated value.
     * Restriction: If a function is declared as static, then it cannot use instance variable, instance funtion or this keyword, because class function is shared between objects.
-
-* Garbage collection
-When we create an object with "new", Java will allocate a memory space for it, and Java Virtual Machine (JVM) will execute garbage collector on its own time.
-Garbage collection is to make an unused variable point to null and release the memory space.
 
 * Inheritance
 When a class extends or inherits from a super class, it means to get the non-private and non-final data and functions from it.
@@ -77,7 +72,7 @@ If a method in an abstract class is declared as abstract, then it won't have any
 Interface is a way to achieve abstraction and multi-inheritance in Java. A class can only inherit one super class but it can implement multiple interfaces.
 The structure of interface is like abstract class but
 1. For interface, the fields and methods are public by default. (public could be ignored)
-1. The data members must be initialized and set to final. (final keyword could be ignored)
+2. The data members must be initialized and set to final. (final keyword could be ignored)
 
 * Wrapper class
 Primitive types are not object in Java. However Java provides wrapper class to use primitive types as objects.
@@ -98,10 +93,10 @@ Primitive types are not object in Java. However Java provides wrapper class to u
         * Inheritance is a concept where one class shares the structure and behavior defined in another class. The purpose of inheritance is Code Reusing.
 
     * Polimorphism
-        * Polymorphism is assigning behavior or value in a subclass to something that was already declared in the main class.
+        * Polymorphism is assigning behavior or value in a subclass to something that was already declared in the super class.
 
         * Polymorphism has 2 main concepts
-            1. Overriding: is to write a function in a subclass using the same function name, parameter list and return typr with one from its superclass, to replace it.
+            1. Overriding: is to write a function in a subclass using the same function name, parameter list and return type with one from its superclass, to replace it.
             2. Overloading: is to use the same method name with different argument list.
 
         * **Method overriding** is a feature that allows a subclass to provide the implementation of a method that overrides the method with the same method name, parameter list, and return type in the super class.

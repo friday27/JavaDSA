@@ -7,16 +7,16 @@ Ref: (1 file for 1 video)
 https://www.youtube.com/watch?v=hB1CTizqGFk&t=102s
 
 * different types of ML
-    - Supervised Learning: 
-        the model will predict based on past data, ex classify
-    - Unsupervised Learning: 
-        the model is able to identify patterns and relationships in the input data (not labor data), ex cluster
-    - Reinforcement Learning:
-        the model is able to learn based on the feedback for its previous action (learn -> perform -> feedback), ex alpha go
+    1. Supervised Learning: 
+        the model will predict based on past data
+    2. Unsupervised Learning: 
+        the model is able to identify patterns and relationships in the input data (not labor data)
+    3. Reinforcement Learning:
+        the model is able to learn based on the feedback for its previous action (learn -> perform -> feedback)
 
 * overfitting and how to avoid it
     - Overfitting
-        occurs when the model learns training data too well. It takes random fluctuations (unimportant messagess) as concepts, thus cannot be applied to new input data, ex. learns background noise as a signal
+        occurs when the model learns training data too well. It takes random fluctuations (unimportant messagess) as concepts, thus cannot be applied to new input data, ex. it might learn background noise as a signal
     - there are 3 main methods to avoid overfitting
         1) regularizatoin - the most common method 
         2) make a simple model - lesser variables and parameters
@@ -174,4 +174,3 @@ https://www.youtube.com/watch?v=hB1CTizqGFk&t=102s
 * explain logistic regression
     - output is either 0 or 1
     - the threshold is usually 0.5
-

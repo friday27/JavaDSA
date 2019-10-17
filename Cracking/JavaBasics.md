@@ -1,13 +1,23 @@
 # Java Basics
 
+* Enum
+A Java enum is a special Java type used to define collections of constants.
+
+* Garbage collection
+When we create an object with "new", Java will allocate a memory space for it, and Java Virtual Machine (JVM) will execute garbage collector on its own time.
+Garbage collection is to make an unused variable point to null and release the memory space.
+
 ### Multi-Thread
 
 * Multi-thread mechanism is to run multiple code blocks at the same time.
+
 * To start multi-thread in a class, we have to make sure
     1. The class is a subclass of **Thread** `class CTest extends Thread {...}`
     2. Write the thread in the method called **run()**
     3. Use `objName.start()` to start a thread
+
 * We can also use `class CTest extends ASuperClass implements Runnable {...}`
+
 * There're 5 statuses of a thread:
     1. Newly created: When the object is instanced
     2. Runable: When `start()` is called, and every thread in this status will compete for CPU resource or stay in a queue
@@ -16,10 +26,12 @@
         * `wait()` is released by `notify()`
         * `objA.join()` means to finish the thread of objA and then run other threads
     5. Dead: When the thread is completed ot `stop()` is called
+
 * We could set and get priority of a thread
     * `void setPriority(int p)`, where p means priority from 10 to 1
     * `int getPriority()`
     * `MAX_PRIORITY`, `MIN_PRIORITY` and `NORM_PRIORITY` could be use along with setPriority()
+
 * synchronized
     * Sometimes when we want to update a static variable using threads, the result might be wrong since thread A and thread B change the variable at the same time and overwrite one of the other result.
     * To avoid this situation, we could use add **synchornized** keyword to the thread

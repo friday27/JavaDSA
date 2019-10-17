@@ -5,7 +5,7 @@ public class PythagorenTriplet {
     // method 1: 3 loops -> time complexity: O(n^3)
     // ...
 
-    // method 2: Arrays.sort() + 2 loops -> O(n^2)
+    // method 2: Arrays.sort() + 2 loops -> O(n^2), no extra space needed
     public boolean pythagorenTriplet(int[] arr) {
         Arrays.sort(arr);
         for(int i=0; i<arr.length; i++) {
