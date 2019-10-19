@@ -1,5 +1,13 @@
 # Object Oriented Concepts
 
+### Interview Questions
+* OOPS concepts: Polymorphism, Inheritance, Encapsulation and Abstraction
+
+* Aggregation and Composition: Aggregation and composition both describe the relationship between the parent class A and the child class B. The difference is that the child class in a aggregation relationship can exist independently while the child class in a composition relationship cannot. For example, ....
+
+* Design a system to implement options in Pack of cards
+
+-----
 * What is OOPS?
 OOP is abbreviated as Object Oriented Programming system in which programs are considered as a collection of objects. Each object is an instance of a class.
 
