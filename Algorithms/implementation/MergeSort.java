@@ -1,12 +1,27 @@
 import java.util.*;
 
 public class MergeSort {
+    // public static int[] mergesort(int[] arr) {
+    //     int n = arr.length;
+    //     if(n <= 1)
+    //         return arr;
+    //     int[] left = mergesort(Arrays.copyOfRange(arr, 0, n/2));
+    //     int[] right = mergesort(Arrays.copyOfRange(arr, n/2, n));
+    //     return merge(left, right);
+    // }
+
     public static int[] mergesort(int[] arr) {
-        int n = arr.length;
-        if(n <= 1)
+        if(arr.length <= 1)
             return arr;
-        int[] left = mergesort(Arrays.copyOfRange(arr, 0, n/2));
-        int[] right = mergesort(Arrays.copyOfRange(arr, n/2, n));
+        return mergesort(arr, 0, arr.length-1);
+    }
+
+    private static int[] mergesort(int[] arr, int start, int end) {
+        if(start >= end)
+            return Arrays.copyOfRange(arr, start, start+1);
+        int mid = start + (end-start)/2;
+        int[] left = mergesort(arr, start, mid);
+        int[] right = mergesort(arr, mid+1, end);
         return merge(left, right);
     }
 

@@ -15,6 +15,18 @@ public class InsertionSort {
         }
     }
 
+    public static void insertionSort2(int[] arr) {
+        if(arr.length <= 1)
+            return;
+        for(int i=0; i<arr.length-1; i++) {
+            int j = i + 1;
+            while(j > 0 && arr[j] < arr[j-1]) {
+                swap(arr, j, j-1);
+                j--;
+            }
+        }
+    }
+
     private static int[] swap(int[] arr, int i, int j) {
         int tmp = arr[i];
         arr[i] = arr[j];
@@ -25,7 +37,8 @@ public class InsertionSort {
     public static void main(String[] args) {
 
         int[] array = {10, 4, 6, 8, 13, 2, 3};
-        insertionSort(array);
+        // insertionSort(array);
+        insertionSort2(array);
         System.out.println(java.util.Arrays.toString(array));
 
         runTests();
@@ -41,13 +54,14 @@ public class InsertionSort {
             for (int j = 0; j < i; j++) array[j] = randInt(-1000000, +1000000);
                 int[] arrayCopy = array.clone();
 
-                insertionSort(array);
+                // insertionSort(array);
+                insertionSort2(array);
                 java.util.Arrays.sort(arrayCopy);
 
                 if (!java.util.Arrays.equals(array, arrayCopy)) {
                     System.out.println("ERROR");
-                    System.out.println("output:\t"+java.util.Arrays.toString(array));
-                    System.out.println("expected:\t"+java.util.Arrays.toString(arrayCopy));
+                    // System.out.println("output:\t"+java.util.Arrays.toString(array));
+                    // System.out.println("expected:\t"+java.util.Arrays.toString(arrayCopy));
                 }
             }
         }

@@ -10,6 +10,19 @@ public class BubbleSort {
         }
     }
 
+    public static void bubbleSort2(int[] arr) {
+        if(arr.length <= 1)
+            return;
+        for(int i=0; i<arr.length; i++) {
+            int j = arr.length-1;
+            while(j > i) {
+                if(arr[j] < arr[j-1])
+                    swap(arr, j, j-1);
+                j--;
+            }
+        }
+    }
+
     private static int[] swap(int[]arr, int i, int j) {
         int temp = arr[i];
         arr[i] = arr[j];
@@ -31,7 +44,8 @@ public class BubbleSort {
             int[] array = new int[i];
             for (int j = 0; j < i; j++) array[j] = randInt(-1000000, +1000000);
                 int[] arrayCopy = array.clone();
-            bubbleSort(array);
+            // bubbleSort(array);
+            bubbleSort2(array);
             java.util.Arrays.sort(arrayCopy);
             if (!java.util.Arrays.equals(array, arrayCopy)) 
                 System.out.println("ERROR");

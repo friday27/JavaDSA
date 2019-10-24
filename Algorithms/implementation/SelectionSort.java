@@ -15,6 +15,19 @@ public class SelectionSort {
         }
     }
 
+    public static void selectionSort2(int[] arr) {
+        if(arr.length <= 1)
+            return;
+        for(int i=0; i<arr.length-1; i++) {
+            int min = i;
+            for(int j=i; j<arr.length; j++) {
+                if(arr[j] < arr[min])
+                    min = j;
+            }
+            swap(arr, i, min);
+        }
+    }
+
     private static int[] swap(int[] arr, int i, int j) {
         int tmp = arr[i];
         arr[i] = arr[j];
@@ -39,13 +52,14 @@ public class SelectionSort {
             for (int j = 0; j < i; j++) array[j] = randInt(-1000000, +1000000);
                 int[] arrayCopy = array.clone();
 
-                selectionSort(array);
+                // selectionSort(array);
+                selectionSort2(array);
                 java.util.Arrays.sort(arrayCopy);
 
             if (!java.util.Arrays.equals(array, arrayCopy))  {
                 System.out.println("ERROR");
-                System.out.println("output:\t"+java.util.Arrays.toString(array));
-                System.out.println("expected:\t"+java.util.Arrays.toString(arrayCopy));
+                // System.out.println("output:\t"+java.util.Arrays.toString(array));
+                // System.out.println("expected:\t"+java.util.Arrays.toString(arrayCopy));
             }
         }
     }
