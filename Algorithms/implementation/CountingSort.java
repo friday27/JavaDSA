@@ -15,6 +15,19 @@ public class CountingSort {
         }
     }
 
+    public static void countingSort2(int[] arr, int lower, int upper) {
+        int[] count = new int[upper-lower+1];
+        for(int n: arr)
+            count[n-lower]++;
+        int i = 0;
+        for(int j=0; j<count.length; j++) {
+            while(count[j] > 0) {
+                arr[i++] = lower+j;
+                count[j]--;
+            }
+        }
+    }
+
     public static void main(String[] args) {
         // The maximum and minimum values on the numbers we are sorting.
         // You need to know ahead of time the upper and lower bounds on
@@ -23,7 +36,7 @@ public class CountingSort {
         final int MAX_VAL = +10;
 
         int[] nums = {+4, -10, +0, +6, +1, -5, -5, +1, +1, -2, 0, +6, +8, -7, +10};
-        countingSort(nums, MIN_VAL, MAX_VAL);
+        countingSort2(nums, MIN_VAL, MAX_VAL);
 
         // prints [-10, -7, -5, -5, -2, 0, 0, 1, 1, 1, 4, 6, 6, 8, 10]
         System.out.println(java.util.Arrays.toString(nums));
