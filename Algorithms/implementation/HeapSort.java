@@ -10,6 +10,18 @@ public class HeapSort {
         }
     }
 
+    public static void heapSortWithPQ2(int[] arr) {
+        if(arr.length <= 1)
+            return;
+        PriorityQueue<Integer> pq = new PriorityQueue<>();
+        for(int n: arr)
+            pq.offer(n);
+        int i = 0;
+        while(!pq.isEmpty()) {
+            arr[i++] = pq.poll();
+        }
+    }
+
     public static void heapSort(int[] arr) {
         if(arr == null)
             return;
@@ -70,8 +82,10 @@ public class HeapSort {
             for (int j = 0; j < i; j++) array[j] = randInt(-1000000, +1000000);
                 int[] arrayCopy = array.clone();
 
-                heapSort(array);
+                // heapSort(array);
+                heapSort2(array);
                 // heapSortWithPQ(array);
+                // heapSortWithPQ2(array);
                 java.util.Arrays.sort(arrayCopy);
 
                 if (!java.util.Arrays.equals(array, arrayCopy)) {

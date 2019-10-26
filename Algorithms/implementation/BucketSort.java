@@ -28,6 +28,25 @@ public class BucketSort {
         }
     }
 
+    public static void bucketSort2(int[] arr, int min, int max, int bucketNum) {
+        if(arr.length <= 1)
+            return;
+        List<List<Integer>> buckets = new ArrayList<>();
+        for(int i=0; i<bucketNum; i++)
+            buckets.add(new ArrayList<Integer>());
+        for(int n: arr) {
+            int b = (n-min)/(max-min);
+            buckets.get(b).add(n);
+        }
+        int k = 0;
+        for(int i=0; i<bucketNum; i++) {
+            Collections.sort(buckets.get(i));
+            List<Integer> bucket = buckets.get(i);
+            for(int j=0; j<bucket.size(); j++)
+                arr[k++] = bucket.get(j);
+        }
+    }
+
     public static void main(String[] args) {
 
         int[] array = {10, 4, 6, 8, 13, 2, 3};
@@ -57,6 +76,7 @@ public class BucketSort {
         int[] arrayCopy = array.clone();
 
         bucketSort(array, minVal, maxVal);
+        // bucketSort2(array, minVal, maxVal, 10);
         Arrays.sort(arrayCopy);
 
         if (!Arrays.equals(array, arrayCopy)) System.out.println("ERROR");
