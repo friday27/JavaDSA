@@ -1,8 +1,12 @@
 # Hash Table
 
-* A hash table is a data structure that provides a mapping from keys to values using a technique called hashing.
+* A hash table is a data structure that provides a mapping from keys to values using a technique called hashing, which is the concept that an input and an output have a one-to-one correspondence.
 
 * A key must be **hashable** (immutable data types).
+
+* **Hash collisions** are when a hash function returns the same output for two distinct inputs. How to resolve **hash collision**? Here are the most popular 2 methods:
+    1. Seperate chaining
+    2. Open addressing
 
 ### Hash function
 * A hash function H(x) is a function that maps a key 'x' to a whole number in a fixed range.
@@ -12,10 +16,6 @@
 * If H(x) == H(y) then objects a and y might be equal, but if H(x) != H(y) then x and y are certainly not equal. Comparing hash values (the output of hash function) first would make the comparing process more effective.
 
 * Hash functions for files are more complex than those used for hashtables. Instead for files we use what are called cryptographic hash functions also called checksums.
-
-* How to resolve **hash collision**? Here are the most popular 2 methods:
-    1. Seperate chaining
-    2. Open addressing
 
 ### Complexity Analysis
 
@@ -74,12 +74,33 @@
         insert (k, v) at table[index]
         // Where H(k) is the hash for the key k and P(k, x) is the probing function
 
+### Seperate Chaining v.s. Open Addressing
+* In seperate chaining method, hash table never fills up, but table might become full in open addressing.
+* Seperate chaining is mostly used when it is unknown how many and how frequently keys may be inserted or deleted. Open addressing is used when the frequency and number of keys is known.
+* Seperate chaining might cause wastage of space. (If we don't have a good uniform hash function)
+* Seperate chaining uses extra space for links.
+
 ### Issue with removing
 * Use naive removing (probe to the next element while the hash result doesn't equal to the target result nor null) would output wrong sometimes. 
 
 * The solution is to use a unique marker called a **tombstone** instead of null to indicate that a (k, v) pair has been deleted and that the bucket should be skipped during a search.
 
 * **Lazy deletion**: Lots of tombstones might cause a crowded table. An optimization called lazy deletion is to replace the first tombstone with the value we did look up for (x) and set x to null.
+
+### Java HashMap - Retrieve keys and values
+
+        HashMap<K, V> ht = new HashMap<>();
+
+* Set entrySet()
+
+        for(Map.Entry<Integer, String> entry: ht.entrySet()) {
+            System.out.println(entry.getKey()+": "+entry;getValue());
+        }
+
+* Key keySet()
+        
+        Set sKey = ht.keySet();
+
 
 ### Related Leetcode Problems
 * [Easy] 136. [Single Number](https://leetcode.com/problems/single-number/)
