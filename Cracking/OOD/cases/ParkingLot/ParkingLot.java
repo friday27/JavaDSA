@@ -1,21 +1,5 @@
 /*
     Design a Parking Lot
-    https://www.educative.io/courses/grokking-the-object-oriented-design-interview/gxM3gRxmr8Z
-
-    Main classes for this parking lot system:
-    * ParkingLot
-    * ParkingFloor
-    * ParkingSpot
-    * Account: For admin and parking attendant
-    * ParkingTicket
-    * Vehicle
-    * EntrancePanel: Print tickets
-    * ExitPanel: Collect parking fee according to the parking ticket
-    * Payment: Support credit card and cash
-    * ParkingRate: Keep track of the hourly parking rates
-    * ParkingDisplayBoard
-    * ParkingAttendantPanel
-    * ElectricPanel: same as ParkingAttendantPanel
 */
 
 public enum VehicleType {
