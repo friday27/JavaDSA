@@ -28,6 +28,10 @@ class Graph<T> {
         b.adj.add(a);
     }
 
+    void addSingleAdj(Node a, Node b) {
+        a.adj.add(b);
+    }
+
     void addAdj(Node a, Node b) {
         a.adj.add(b);
         b.adj.add(a);

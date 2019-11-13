@@ -4,6 +4,7 @@
 * [Parking lot](cases/ParkingLot/ParkingLot.md)
 * Elevator
 * Online shopping system
+* Other cracking ch.7 problems
 
 * Stack overflow
 * Movie ticket booking system
