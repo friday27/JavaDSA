@@ -90,6 +90,10 @@ Primitive types are not object in Java. However Java provides wrapper class to u
     * Call by Value – Value passed will get modified only inside the function, and it returns the same value whatever it is passed into the function.
     * Call by Reference – Value passed will get modified in both inside and outside the functions and it returns the same or different value.
 
+* Overloading v.s. Overriding
+    * Overloading is a term used to describe when two methods have the same name but differ in the type or number of arguments.
+    * Overriding, however, occurs when a method shares the same name and function signature as another method in its super class.
+
 * Main concepts of OOPS
     * Abstraction
         * Objects in an OOP language provide an abstraction that hides the internal implementation details. Similar to the coffee machine, we just need to know which methods of the object are available to call and which input parameters are needed to trigger a specific operation. But we don’t need to understand how this method is implemented and which kinds of actions it has to perform to create the expected result.
