@@ -1,5 +1,13 @@
 # Object Oriented Concepts
 
+### Cases
+* [Parking Lot](https://www.educative.io/courses/grokking-the-object-oriented-design-interview/gxM3gRxmr8Z)
+* Elevator
+    * https://leetcode.com/discuss/interview-question/object-oriented-design/309866/Amazon-or-Onsite-interview-or-Design-an-elevator
+* More
+    * https://leetcode.com/discuss/interview-question/object-oriented-design?currentPage=1&orderBy=recent_activity&query=amazon
+
+
 ### Interview Questions
 * OOPS concepts: Polymorphism, Inheritance, Encapsulation and Abstraction
 

@@ -1,3 +1,22 @@
+/*
+    ### Complexity Analysis
+
+        +-------------+-----------+-------+
+        | Operation   | Avg       | Worst |
+        +-------------+-----------+-------+
+        | Insert      | O(log(n)) | O(n)  |
+        +-------------+-----------+-------+ 
+        | Delete      | O(log(n)) | O(n)  |
+        +-------------+-----------+-------+
+        | Remove      | O(log(n)) | O(n)  |
+        +-------------+-----------+-------+
+        | Search      | O(log(n)) | O(n)  |
+        +-------------+-----------+-------+
+        * The worst case: All the adding elements are greater than the previous one, 
+        or all the adding elements are less than the previous one
+
+*/
+
 public class BinarySearchTree <T extends Comparable<T>>{
     private int nodeCount = 0;
     private Node root = null;
@@ -64,7 +83,7 @@ public class BinarySearchTree <T extends Comparable<T>>{
                 return null;
             else if(node.left == null) {
                 Node rightChild = node.right;
-                node.data = null;
+                node.data = null; //clear memory space
                 node = null;
                 return rightChild;
             }else if(node.right == null) {
@@ -73,7 +92,7 @@ public class BinarySearchTree <T extends Comparable<T>>{
                 node = null;
                 return leftChild;
             }else {
-                Node tmp = digLeft(node.right);
+                Node tmp = digLeft(node.right); //the smallest element in the right subtree
                 node.data = tmp.data;
                 node.right = remove(node.right, tmp.data);
             }

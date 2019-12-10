@@ -4,14 +4,13 @@ public class DoublyLinkedList<T> implements Iterable<T> {
     private Node<T> tail = null;
 
     // Internal node class to represent data
-    private class Node<T> {
+    class Node<T> {
         T data;
         Node<T> prev, next;
 
-        public Node(T data, Node<T> prev, Node<T> next) {
+        public Node(T data) {
             this.data = data;
-            this.prev = prev;
-            this.next = next;
+            this.prev = this.next = null;
         }
 
         @Override
@@ -46,9 +45,10 @@ public class DoublyLinkedList<T> implements Iterable<T> {
 
     public void addLast(T elem) {
         if(isEmpty()) {
-            head = tail = new Node(elem, null, null);
+            head = tail = new Node<T>(elem);
         } else {
-            tail.next = new Node(elem, tail, null);
+            tail.next = new Node<T>(elem);
+            tail.next.prev = tail;
             tail = tail.next;
         }
         size++;
@@ -56,10 +56,12 @@ public class DoublyLinkedList<T> implements Iterable<T> {
 
     public void addFirst(T elem) {
         if(isEmpty()) {
-            head = tail = new Node(elem, null, null);
+            head = tail = new Node<T>(elem);
         } else {
-            head.prev = new Node(elem, null, head);
-            head = head.prev;
+            Node<T> node = new Node<T>(elem);
+            head.prev = node;
+            node.next = head;
+            head = node;
         }
         size++;
     }

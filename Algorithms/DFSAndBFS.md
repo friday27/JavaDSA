@@ -20,6 +20,16 @@
             return visited;
         }
 
+        void dfs(int head) {
+            System.out.print(head+" ");
+            List<Integer> adj = map.get(head);
+            if(adj.size() != 0) {
+                for(int i: adj)
+                    dfs(i);
+            }
+            System.out.println();
+        }
+
 * Questions
     * Is there a path from A to B?
 
@@ -65,6 +75,24 @@
             return visited;
         }
 
+        void bfs(int head) {
+            Queue<Integer> q = new LinkedList<>();
+            q.offer(head);
+            while(!q.isEmpty()) {
+                int current = q.poll();
+                System.out.print(current+" ");
+                List<Integer> adj = map.get(current);
+                if(adj.size() != 0) {
+                    for(int i: adj)
+                        q.offer(i);
+                }
+            }
+            System.out.println();
+        }
+
+* Time Complexity
+Search: O(V + E), where E is number of edges, V is number of vertices
+
 * Questions
     * Find the shortest path from A to B
 
@@ -75,6 +103,16 @@
     2. Repeat until the queue is empty
         1. Dequeue (remove the least added vertex v)
         2. Enqueue all unvisited neighbors of v and mark them as visited
+
+-----
+### Breadth First Search v.s. Depth First Search
+The simple answer to this question is that it depends on the size and shape of the tree.
+For wide, shallow trees use Breadth First Search
+For deep, narrow trees use Depth First Search
+
+* More
+    * Because BFS uses queues to store information about the nodes and its children, it could use more memory than is available on the computer.
+    * Breadth First Search tends to be a looping algorithm, while Depth First Search tends to be a recursive algorithm.
 
 -----
 ### Related Leetcode Problems

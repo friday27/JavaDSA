@@ -1,0 +1,3 @@
+
+class ElevatorButton extends Button {
+}

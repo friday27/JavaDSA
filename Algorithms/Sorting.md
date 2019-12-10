@@ -1,36 +1,29 @@
 # Sorting
 
 ### Bubble Sort - O(n^2)
-* Process
-    1. Starting from the last element, if the previous element is larger than it, swap them. 
-    2. Keep doing this comparison until reach index 1, and it means elements before index 1 is sorted.
-    3. Starting from the last element again, keep comparing 2 elements until the sorted index is reached 
 
         for(int i=0; i<arr.length; i++) {
             for(int j=arr.length-1; j>i; j--) {
                 if(arr[j] < arr[j-1])
-                    arr = swap(arr, j, j-1);
+                    swap(arr, j, j-1);
             }
         }
 
 ### Selection Sort - Time: O(n^2), Space: O(1)
-* Process
-    * In iteration i, find the index of the smallest one from the remaining elements. (i+1 ~ end)
-    * Swap(i, min) so the elements before index i would be sorted.
 
-            public static void selectionSort(int[] arr) {
-                if(arr == null)
-                    return;
-                for(int i=0; i<arr.length; i++) {
-                    int minIdx = i;
-                    // j = i+1, no need to compare with the selected element itself
-                    for(int j=i+1; j<arr.length; j++) {
-                        if(arr[j] < arr[minIdx])
-                            minIdx = j;
-                    }
-                    arr = swap(arr, i, minIdx);
+        public static void selectionSort(int[] arr) {
+            if(arr == null)
+                return;
+            for(int i=0; i<arr.length; i++) {
+                int minIdx = i;
+                // j = i+1, no need to compare with the selected element itself
+                for(int j=i+1; j<arr.length; j++) {
+                    if(arr[j] < arr[minIdx])
+                        minIdx = j;
                 }
+                arr = swap(arr, i, minIdx);
             }
+        }
 
 ### Insertion Sort - O(n^2)
 * Make index 0 as the first sorted element. Starting from index 1, compare from the last element in the sorted array and move forawrd if it's smaller until it meets a smaller element.
@@ -114,12 +107,18 @@
     1. Divide: We divide the input array into 2 halves from the midpoint. This step is carried out recursively for all the half arrays until there are no more half arrays to divide.
     2. Conquer: In this step, we short and merge the divided arrays from the bottom to top and get the sorted array.
 
-        public static int[] mergesort(int[] arr) {
-            int n = arr.length;
-            if(n <= 1)
+        int[] mergesort(int[] arr) {
+            if(arr.length <= 1)
                 return arr;
-            int[] left = mergesort(Arrays.copyOfRange(arr, 0, n/2));
-            int[] right = mergesort(Arrays.copyOfRange(arr, n/2, n));
+            return mergesort(arr, 0, arr.length-1);
+        }
+
+        int[] mergesort(int[] arr, int start, int end) {
+            if(start >= end)
+                return Arrays.copyOfRange(arr, start, start+1);
+            int mid = start + (end-start)/2;
+            int[] left = mergesort(arr, start, mid);
+            int[] right = mergesort(arr, mid+1, end);
             return merge(left, right);
         }
 
@@ -144,43 +143,38 @@
         }
 
 ### Quick Sort - O(n log(n)) on avg, O(n) for the best case, O(n^2) for the worst case
-* The first iteration takes O(n)
-        * The second iteration takes 2xO(n/2)
-        * In the worst case, O(n^2)
 
-* Process
-    * Choose one element as the **pivot** and move all elements which is smaller than it the left side, bigger ones to the right side
-    * Choose new pivot for the left and right side and keep doing this until all elements are sorted
+        void quicksort(int[] arr) {
+            if (arr == null || arr.length <= 1) 
+                return;
+            quicksort(arr, 0, arr.length - 1);
+        }
 
-            public static void quicksort(int[] arr) {
-                if (arr == null) 
-                    return;
-                quicksort(arr, 0, arr.length - 1);
+        // Sort interval [lo, hi] inplace recursively
+        void quicksort(int[] arr, int lo, int hi) {
+            if (lo < hi) {
+                int splitPoint = partition(arr, lo, hi);
+                quicksort(arr, lo, splitPoint-1);
+                quicksort(arr, splitPoint+1, hi);
             }
+        }
 
-            // Sort interval [lo, hi] inplace recursively
-            private static void quicksort(int[] arr, int lo, int hi) {
-                if (lo < hi) {
-                    int splitPoint = partition(arr, lo, hi);
-                    quicksort(arr, lo, splitPoint-1);
-                    quicksort(arr, splitPoint+1, hi);
+        // Performs Hoare partition algorithm for quicksort
+        int partition(int[] arr, int lo, int hi) {
+            int pivot = arr[hi];
+            // See i is the seperate point between element smaller than pivot and greater than it
+            int i = lo - 1, j = lo;
+            while(j < hi) {
+                if(arr[j] <= pivot) {
+                    swap(arr, ++i, j);
                 }
+                j++;
             }
+            swap(arr, ++i, hi);
+            return i;
+        }
 
-            // Performs Hoare partition algorithm for quicksort
-            private static int partition(int[] arr, int lo, int hi) {
-                int pivot = arr[hi];
-                // See i is the seperate point between element smaller than pivot and greater than it
-                int i = lo - 1, j = lo;
-                while(j < hi) {
-                    if(arr[j] <= pivot) {
-                        swap(arr, ++i, j);
-                    }
-                    j++;
-                }
-                swap(arr, ++i, hi);
-                return i;
-            }
+* [GeeksForGeeks reference of quick sort](https://www.geeksforgeeks.org/quick-sort/)
 
 ### [Bucket Sort](implementation/BucketSort.java)
 

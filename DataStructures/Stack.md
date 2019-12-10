@@ -1,6 +1,6 @@
 # Stack
 
-A stack is a one-ended linear data structure which models a real world stack by having 2 primary operations, namely push and pop.
+A stack is a one-ended, last in first out, linear data structure which models a real world stack by having 2 primary operations, namely push and pop.
 
 ### Complexity Analysis
 

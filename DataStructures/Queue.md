@@ -1,6 +1,6 @@
 # Queue
 
-* A queue is a linear data structure which models real world queues by 2 primary operations namely enqueue and dequeue. 
+* A queue is a first in, first out linear data structure which models real world queues by 2 primary operations namely enqueue and dequeue. 
 
 * A queue is an abstract data type (ADT), hence it can be implemented using what ever underlying data structure you want. There it no best answer, although the most popular choices are to use either an array or a linked lists because of the nice time complexity benefits.
 

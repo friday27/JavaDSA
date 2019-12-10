@@ -6,6 +6,8 @@
     * A connected graph with N nodes and N-1 edges
     * An graph in which any 2 vertices are connected by exactly 1 path
 
+* A Binary Tree is a tree-liked data structure where every node has at most two child nodes.
+
 * A BST is a binary tree that satisfies the BST invariant: left subtree has smaller elements and right subtree has larger elements.
 
 ### Complexity Analysis

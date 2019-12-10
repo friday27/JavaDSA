@@ -1,0 +1,3 @@
+
+class FloorButton extends Button {
+}
