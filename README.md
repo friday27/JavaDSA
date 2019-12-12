@@ -60,7 +60,8 @@ Before diving into recursive code, ask yourself how hard it would be to implemen
 * Basic Problems
     * [Fibonacci](cracking/dynamic_programming/Fibonacci.java)
     * [8.1 Triple Step](cracking/dynamic_programming/TripleStep.java)
-    * [8.2 Robot in a Grid]
+    * [8.2 Robot in a Grid (unchecked)](cracking/dynamic_programming/RobotInAGrid.java)
+    * [8.3 Magic Index (TODO: follow up)](cracking/dynamic_programming/MagicIndex.java)
 
 -----
 ### References
