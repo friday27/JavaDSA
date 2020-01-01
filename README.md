@@ -1,25 +1,8 @@
 # Data Structures and Algorithms in Java
 
 # TODOs
-* Cracking
-    * Part I. The Interview Porcess
-    * Part III. Special Situations
-    * Part IV. Before the Interview
-    * Part V. Behavirol Questions
-* Review Data Structures
-* Review Algorithms
-* OOP Design
-* Recursion
-* Dynamic Programming
-* System Design
-    * Concepts review
-    * Cases
-* Testing
-* Java (Ch.13)
-* Databases (ch.14)
-* Threads and Locks (ch.15)
-* Additional Review Problems (ch.16 & 17)
-* Advanced Topics ()
+* Review basic chapters and create a cheatsheet with time and space complexity
+* Advanced Topics
 
 # Data Structures
 ### Arrays
